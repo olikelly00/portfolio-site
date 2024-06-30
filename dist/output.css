@@ -685,6 +685,10 @@ video {
   display: grid;
 }
 
+.h-0 {
+  height: 0px;
+}
+
 .h-\[370px\] {
   height: 370px;
 }
@@ -723,10 +727,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.max-w-\[10px\] {
-  max-width: 10px;
 }
 
 .max-w-\[1920px\] {
@@ -1135,16 +1135,16 @@ h1, h2, h3, h4, h5, h6 {
     top: 0px;
   }
 
-  .lg\:flex {
-    display: flex;
-  }
-
   .lg\:hidden {
     display: none;
   }
 
   .lg\:h-7 {
     height: 1.75rem;
+  }
+
+  .lg\:h-full {
+    height: 100%;
   }
 
   .lg\:flex-row {
