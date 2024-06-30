@@ -66,7 +66,7 @@
                             <h1 class="h1 mb-18 ">Oli Kelly</h1>
                             <h3 class="h3 mb-2">Software Developer, London</h3>
                         </div>
-                        <div class="btn__container flex gap-10">
+                        <div class="btn__container flex flex-col lg:flex-row gap-10">
                             <button class="btn btn-primary mx-auto flex xl:mx-0">
                                 <a href="https://www.github.com/olikelly00" class="flex flex-row items-center">
                                     Find me on Github &nbsp
@@ -134,10 +134,11 @@
             <br><br><br><br>
             <div class="container mx-auto xl:px-0">
 
-                <div class="flex flex-row  text-center xl:text-left justify-between items-center gap-8 xl:gap-[74px]">
+                <div class="flex flex-col-reverse lg:flex-row text-center xl:text-left justify-center items-center gap-8 xl:gap-[74px]">
+
                     <!--text-->
                     <div
-                        class="about__text flex-row order-1 xl:order-none max-w-xl xl:max-w-[400px] flex-col items-center xl:items-start gap-8">
+                        class="about__text flex-row max-w-xl xl:max-w-[400px] flex-col items-center xl:items-start gap-8">
                         <h2 class="h2">Hi, I'm Oli 👋</h2>
                         <br>
                         <p>I'm a former tech recruiter and languages graduate turned software engineer. I'm passionate
@@ -155,9 +156,8 @@
                         <p>3. Continuous learning: Technology is ever-changing, keeping things exciting.</p>
                     </div>
                     <!--image-->
-                    <div class="about__img flex order-1 xl:order-none max-w-[453px] mx-auto xl:max-w-none xl:mx-0">
-                        <img class="rounded-[70px] max-w-[400px]" src="assets/hero/about-me-pic.jpeg"
-                            alt="about-image" />
+                    <div class="about__img flex max-w-[453px] mx-auto xl:max-w-none xl:mx-0">
+                        <img class="rounded-[70px] max-w-[400px]" src="assets/hero/about-me-pic.jpeg" alt="about-image" />
                     </div>
                 </div>
             </div>
@@ -165,10 +165,11 @@
         <!--testimonial-->
         <section id="testimonial" class="testimonial mt-[80px] xl:mt-[200px] relative z-20">
             <br><br>
-            <div class="testimonial__bg container mx-auto bg-accent-secondary rounded-[70px] px-6">
+            <div class="testimonial__bg container mx-auto bg-accent-secondary rounded-[70px] px-6 ">
+                <br><br>
                 <h2 class="testimonial__title h2 mb-9 text-center">Check out some of my recent projects</h3>
                     <!--slider-->
-                    <div class="w-full">
+                    <div class="w-ful">
                         <div class="testimonial__slider swiper h-[400px]">
                             <div class="swiper-wrapper">
                                 <!--slide 1-->
@@ -274,9 +275,13 @@
 
 
                             </div>
+                            <br><br><br>
                             <div class="swiper-pagination"></div>
+                            
                         </div>
+                        
                     </div>
+                    <br>
             </div>
         </section>
         <!--news-->
