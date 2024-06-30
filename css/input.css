@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 body {
     @apply font-secondary text-[22px] text-secondary;
 }
@@ -11,6 +12,10 @@ a {
 }
 
 li {
+    @apply text-[20px] hover:text-accent transition-all duration-300;
+}
+
+.footer-links .footer-link {
     @apply text-[20px] hover:text-accent transition-all duration-300;
 }
 

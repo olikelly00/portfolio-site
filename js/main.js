@@ -49,14 +49,14 @@ sr.reveal('.steps__step', {distance: '100px', interval: 100 });
 //about
 
 sr.reveal('.about__text', {origin: 'left'});
-sr.reveal('.about__img', {origin: 'right', delay: '800'});
+sr.reveal('.about__img', {origin: 'right', delay: '600'});
 
 
 //testimonials
 
-sr.reveal('.testimonial__bg', {delay: '800'});
+sr.reveal('.testimonial__bg', {delay: '600'});
 sr.reveal('.testimonial__title');
-sr.reveal('.testimonial__slider', {delay: '1000'});
+sr.reveal('.testimonial__slider', {delay: '800'});
 
 //news
 sr.reveal('.news__title');
@@ -66,6 +66,10 @@ sr.reveal('.news__item', {
     interval: 100,
     delay: 1000,
 });
+
+//pictures
+
+sr.reveal('.pics__pic', {distance: '100px', interval: 100 });
 
 //footer
 sr.reveal('.footer__item', {
