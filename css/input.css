@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav-is-open {
-    @apply h-[350px] p-6;
+    @apply h-[350px] p-6 z-60;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
