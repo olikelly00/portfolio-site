@@ -1255,3 +1255,21 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
   }
 }
+
+
+.blogpostContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  border-left: 12em solid rgb(244 240 236); 
+  border-right: 12em solid rgb(244 240 236); 
+  border-top: 4em solid rgb(244 240 236); 
+  padding: 40px;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.blogImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

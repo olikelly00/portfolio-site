@@ -1,0 +1,126 @@
+<!--about-->
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demystifying AI: From Neural Networks to Creative Machines</title>
+     <!--CSS-->
+     <link rel="stylesheet" href="dist/output.css" />
+     <!--ICONS-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css" />
+     <!--FONTS-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link
+         href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+         rel="stylesheet" />
+</head>
+<body>
+    <section class="blogpostContainer">
+<br>
+<h1>Demystifying AI: From Neural Networks to Creative Machines</h1>
+<br>
+
+<p>The developments in AI might be the world’s biggest technical advance this century. Few fields have captured the imagination of engineers and penetrated popular culture quite like AI.</p>
+
+<p>As someone without a technical background, I’ve found the general conversation around AI to be complicated, fast-changing, and bogged down by abstruse terms, which makes it hard to get started when trying to understand how it all works. On closer inspection, whilst the details of AI can be complex, I’ve found the key principles and methods of developing AI are quite simple. By breaking down the key points, it's possible for a beginner to build a general understanding of how AI works.</p>
+
+<p>I wish I’d found a post breaking down the key points of AI sooner, so I hope this helps you join the conversation.</p>
+
+<br>
+<h2>Where did AI come from?</h2>
+
+<p>The concept of "thinking machines" was first seriously discussed at the 1956 Dartmouth Workshop. This gathering of experts marked the birth of AI as a field of study, and caused a flurry of excitement in technical and corporate circles not unlike the one we’re seeing in the 2020s.</p>
+
+<p>The experts aimed to build a ‘fully thinking machine’ within a generation. This wasn’t achieved and the disillusionment that followed is what’s known as the first ‘AI Winter’. This cycle of hype and breakthroughs followed by stagnation has continued ever since, but each time the summer turned to winter, researchers and developers had made major breakthroughs.</p>
+
+<p>These breakthroughs were aided by colossal advancements in computing power. Moore’s law dictates that technology becomes cheaper and more accessible over time as advancements are made. For example, in 2024, an iPhone is more computationally powerful than all the technology that powered NASA’s first moon landing in 1969. We’re carrying around all of that power in our pocket. The same is true for the powerful computers that train AI models - these have become more commonplace as time has passed. AI development has also become more accessible thanks to cloud computing. This gives people or businesses access to much more powerful virtual servers / computers more easily and more cheaply than housing your own mini data center.</p>
+
+<p>So through a recurring cycle of breakthroughs and setbacks, what started as conversations about ‘thinking machines’ has evolved into powerful tools that are more accessible than ever. But if a computer is nothing more than an intricate piece of metal, how does it actually learn?</p>
+<br><br>
+<h2>Part 1: How is the Machine Learning?</h2>
+
+<p>AI systems learn through three primary methods:</p>
+
+<h3>Supervised Learning</h3>
+
+<p>This approach involves training a model with labeled data. Imagine teaching a child to identify animals by showing them pictures with names. Similarly, we feed machines vast amounts of labeled data (e.g., "This is a dog", "This is a muffin") until they can make accurate predictions on new, unseen data.</p>
+
+<br>
+<div class="blogImageContainer">
+<img src="assets/dogvsmuffin.jpg" width="400px" height="400px">
+</div>
+<br>
+
+<p>However, this method isn't without its challenges. For instance, distinguishing between a labradoodle and fried chicken can be surprisingly difficult for AI, highlighting the nuances of visual recognition that humans often take for granted.</p>
+
+<br>
+<div class="blogImageContainer">
+<img src="assets/dogvsfriedchicken.jpeg" width="400px" height="400px">
+</div>
+<br>
+
+<br>
+<h3>Reinforcement Learning</h3>
+
+<p>This method mirrors the way we might train a pet, using rewards and penalties. In AI terms, the system receives numerical rewards (akin to dog treats for a new puppy) for correct actions and penalties for incorrect ones, learning through trial and error to maximize its cumulative reward.</p>
+
+<br>
+<h3>Unsupervised Learning</h3>
+
+<p>Often considered the holy grail of machine learning, unsupervised learning involves presenting the AI with unlabeled data and allowing it to find patterns and structures independently. It's akin to giving a child a box of assorted objects and asking them to group similar items without any guidance. This method is powerful because it doesn't require the time-consuming process of labeling data, but it's also more challenging to implement effectively.</p>
+<p>Despite being different approaches, each of these training techniques starts with the computer making random predictions about what the ‘right’ answer is, learning whether that answer was correct, storing that information and trying again. But what makes an AI system able to learn like a human can?</p>
+<br><br>
+<h2>Part 2: The Architecture of AI: Modelling Machines on the Human Brain</h2>
+<br>
+<p>At the core of many AI systems are neural networks, structures inspired by the human brain.</p>
+
+<div class="blogImageContainer">
+    <img src="assets/neuralnetwork.jpg" width="500px" height="400px">
+</div>
+
+<p>A neural network consists of interconnected nodes (neurons) organized in layers. This mirrors the structure of neurons in the human brain. In anatomy, the brain is made up of around 86 billion neurons. Those neurons are connected by synapses (like cables). The thickness (or ‘weight’) of that synapse denotes how strong the connection is between those two neurons.</p>
+
+<p>In AI systems, information is passed to the machine via the Input Layer (the entry point to the AI system) and flows through these networks of interconnected neurons (this is called the Hidden Layer). Each neuron performs a simple calculation before sending the information to the next neuron via their connecting synapse. The connections between neurons, called synapses, have associated weights that determine the strength of the signal passed along. As the network processes data, it adjusts these weights, effectively learning from experience. Once the information has passed through the hidden layer, it reaches the Output layer, where the machine makes a prediction based on what it has learned.</p>
+
+<p>This is exactly how learning works for humans: as associations are made between pieces of information, the connections between the neurons strengthen, effectively rewiring your brain.</p>
+
+<p>To illustrate, let's consider how a feedforward neural network might be used in training a language model like GPT:</p>
+
+<br><br>
+<p><strong>Input Layer:</strong> A sequence of words or tokens enters the network.</p>
+<p><strong>Hidden Layers:</strong> These process the input, applying weights and activation functions.</p>
+<p><strong>Output Layer:</strong> The network predicts the next word in the sequence.</p>
+<p><strong>Training:</strong> The prediction is compared to the actual next word, and the error is used to adjust the network's weights through backpropagation.</p>
+
+
+
+<p>This process is repeated millions of times, allowing the model to learn patterns in language and generate coherent text. Of course, modern language models like GPT use more complex architectures, but this example illustrates the basic principle.</p>
+
+<br><br>
+<h2>Advanced AI Architectures</h2>
+
+<p>Two notable architectures in modern AI are Generative Adversarial Networks (GANs) and Diffusion Models.</p>
+
+<p>GANs consist of two neural networks in competition: a generator that creates synthetic data (like images) and a discriminator that attempts to distinguish between real and generated data. This adversarial process leads to remarkably realistic outputs, pushing the boundaries of AI-generated content.</p>
+
+<p>Diffusion models, a more recent innovation, take a different approach. They start with noise and gradually refine it into coherent data. This process is analogous to slowly revealing an image hidden in static, resulting in high-quality, diverse outputs. Diffusion models have gained prominence in image generation tasks, producing strikingly realistic and creative results.</p>
+
+<br><br>
+<h2>The Horizon: Artificial General Intelligence (AGI)</h2>
+
+<p>As AI continues to evolve, the ultimate goal for many researchers is Artificial General Intelligence (AGI) - a system capable of performing any intellectual task that a human can. While we're not there yet, each breakthrough brings us closer to this science fiction-like reality.</p>
+
+<p>Interestingly, a recent study showed that AI-generated faces are more likely to be picked out of a lineup as 'real' humans than actual human faces, highlighting both the impressive progress of AI and the potential challenges it poses for discerning reality from artificial creations.</p>
+
+<br><br>
+<h2>Conclusion</h2>
+
+<p>The field of AI is rapidly advancing, with applications ranging from facial recognition on our smartphones to generating art. As we continue to push the boundaries of what's possible, it's crucial to understand the fundamental concepts driving these innovations.</p>
+
+<p>Whether you're a tech enthusiast or simply curious about the future of technology, staying informed about AI developments is increasingly important in our interconnected world. Who knows? The next breakthrough might just be around the corner, potentially transforming the way we interact with technology in ways we can scarcely imagine.</p>
+</section>
+</body>
+</html>
+
