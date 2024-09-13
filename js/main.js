@@ -76,3 +76,15 @@ sr.reveal('.footer__item', {
     distance: '100px',
     interval: 100,
 });
+
+
+//blog post
+
+sr.reveal('.blog-title', { delay: 300 });
+sr.reveal('.blog-intro', { delay: 400 });
+sr.reveal('.blog-section1', { delay: 500 });
+sr.reveal('.blog-section2', { delay: 600 });
+sr.reveal('.blog-section3', { delay: 700 });
+sr.reveal('.blog-section4', { delay: 800 });
+sr.reveal('.blog-section5', { delay: 900 });
+sr.reveal('.blog-section6', { delay: 1000 });
