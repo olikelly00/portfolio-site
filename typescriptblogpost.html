@@ -28,10 +28,10 @@
 
             <!-- logo -->
             <!-- <a href=""> -->
-                
+
             <!-- <img src="assets/hero/logo_smal.png" alt="logo"> -->
 
-        <!-- </a> -->
+            <!-- </a> -->
             <!--nav-->
             <nav>
                 <!--nav mobile trigger-->
@@ -53,7 +53,20 @@
     <section class="blogpostContainer">
         <br>
         <span class="blog-title">
-        <h1>Unlocking TypeScript: Your Roadmap to Smarter JavaScript Development</h1><br></span>
+            <h1>Unlocking TypeScript: Your Roadmap to Smarter JavaScript Development</h1><br>
+        </span>
+        <div class="contents">
+            <p><strong>Contents</strong></p><br>
+            <a href="#blog-section1">Why was TypeScript Invented?</a><br>
+            <a href="#blog-section2">How do I get started with TypeScript?</a><br>
+            <a href="#blog-section3">Type Annotations</a><br>
+            <a href="#blog-section4">Primitive Data Types</a><br>
+            <a href="#blog-section5">Customising Your Own Types: Benefits and Pitfalls</a><br>
+            <a href="#blog-section6">Using TypeScript with React</a><br>
+            <br><br>
+            <hr>
+            <br>
+        </div>
         <div class="blog-intro">
             <p>Before I became a developer, I worked in tech recruitment, occasionally hiring for roles that required
                 TypeScript experience.</p><br>
@@ -61,13 +74,15 @@
                 without a solid grasp of JavaScript, TypeScript felt difficult to unpack—what did it offer that
                 JavaScript didn’t?</p><br>
             <p>With some Javascript projects under my belt, I wanted to explore Typescript. Why has its popularity
-                surged (with 37% increase in global usage in 2023), making it the third most popular language on GitHub? </p><br>
+                surged (with 37% increase in global usage in 2023), making it the third most popular language on GitHub?
+            </p><br>
             <p>This beginner's guide will help you understand, install, and start using TypeScript to power both the
                 frontend and backend of your next project. Having benefited from the wealth of online resources on
                 TypeScript, I hope to pay it forward by offering my own perspective and guidance.</p>
             <br>
         </div>
-        <div class="blog-section1">
+        <div id="blog-section1" class="blog-section1">
+            <br><br><br><br>
             <h3>Why was TypeScript invented?</h3>
             <br>
             <p>JavaScript is a powerful language, but it has its limitations, especially when building large, complex
@@ -90,7 +105,8 @@
                 making the development experience smoother.</p><br>
             <br>
         </div>
-        <div class="blog-section2">
+        <div id="blog-section2" class="blog-section2">
+            <br><br><br><br>
             <h3>How do I get started with Typescript?</h3>
             <br>
             <p>TypeScript files use the <code>.ts</code> extension, whereas JavaScript files use <code>.js</code>. These
@@ -114,7 +130,8 @@
             </pre>
             <br>
         </div>
-        <div class="blog-section3">
+        <div id="blog-section3" class="blog-section3">
+            <br><br><br><br>
             <h3>Type annotations</h3><br>
             <p>Type annotations allow you to specify the type of data a variable or function should hold.</p>
             <p>This helps catch mistakes early. In JavaScript, you can assign any value to a variable, but in
@@ -131,7 +148,8 @@
                 of one type can be assigned to a variable expecting another type. For example, if a function expects a
                 string and you give it a number, TypeScript will flag this as an error.</p><br>
         </div>
-        <div class="blog-section4">
+        <div id="blog-section4" class="blog-section4">
+            <br><br><br><br>
             <h3>Primitive Data Types</h3><br>
             <p>TypeScript has several basic, or "primitive," data types:</p><br>
             <p><code>string:</code> for text.</p>
@@ -156,7 +174,8 @@
                 enums, which allow for greater flexibility in your code.</p>
             <br>
         </div>
-        <div class="blog-section4">
+        <div id="blog-section4" class="blog-section4">
+            <br><br><br><br>
             <h3>Complex Data Types</h3><br>
             <p>TypeScript also supports more complex types, like arrays and enums:</p><br>
             <h3>Arrays</h3><br>
@@ -196,7 +215,8 @@
                 }</code></pre><br> <br>
         </div>
 
-        <div class="blog-section5">
+        <div id="blog-section5" class="blog-section5">
+            <br><br><br><br>
             <h3>Customising Your Own Types: Utility Types, Interfaces, Custom Types, Optional Types, <code>any</code>,
                 and Pitfalls
             </h3><br>
@@ -269,11 +289,13 @@
                 types – they can solve problems quickly, but you might end up introducing more complexity in the long
                 run.</p><br><br>
         </div>
-       <div class="blog-section6">
-        <h3>Using TypeScript with React
-        </h3><br>
-        <p>You can use TypeScript with React by writing your components in <code>.tsx</code> files. This helps when defining the types for your component’s props and state. Here’s a simple example:</p><br>
-        <pre><code class="language-typescript">
+        <div id="blog-section6" class="blog-section6">
+            <br><br><br><br><br>
+            <h3>Using TypeScript with React
+            </h3><br>
+            <p>You can use TypeScript with React by writing your components in <code>.tsx</code> files. This helps when
+                defining the types for your component’s props and state. Here’s a simple example:</p><br>
+            <pre><code class="language-typescript">
             type GreetingProps = {
                 name: string;
               };
@@ -281,24 +303,28 @@
             const Greeting: React.FC<GreetingProps> = ({ name }) => {
                 return <h1>Hello, {name}!</h1>;
               };</code></pre><br>
-<p>In React, when handling events (like button clicks), you need to specify the event type:
-</p>
-<pre><code class="language-typescript">
+            <p>In React, when handling events (like button clicks), you need to specify the event type:
+            </p>
+            <pre><code class="language-typescript">
     const handleClick = (event: React.MouseEvent&lt;HTMLButtonElement&gt;) => {
         console.log('Button clicked!', event);
       };
    </code></pre><br>
-<p>For more information on React’s built-in types, check out <strong><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts">this folder of the DefinitelyTyped documentation</a></strong>, and <strong><a href="https://react.dev/learn/typescript">React's own Typescript documentation</a></strong> by following these links.
-</p>
-  
-       </div>
+            <p>For more information on React’s built-in types, check out <strong><a
+                        href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts">this
+                        folder of the DefinitelyTyped documentation</a></strong>, and <strong><a
+                        href="https://react.dev/learn/typescript">React's own Typescript documentation</a></strong> by
+                following these links.
+            </p>
+
+        </div>
     </section>
-     <!--scroll reveal js-->
-     <script src="js/scrollreveal.min.js"></script>
-     <!--swiper js-->
-     <script src="js/swiper-bundle.min.js"></script>
-     <!--main js-->
-     <script src="js/main.js"></script>
+    <!--scroll reveal js-->
+    <script src="js/scrollreveal.min.js"></script>
+    <!--swiper js-->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!--main js-->
+    <script src="js/main.js"></script>
     <!-- Prism JS for syntax highlighting -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
 </body>

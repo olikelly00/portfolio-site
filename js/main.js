@@ -81,6 +81,7 @@ sr.reveal('.footer__item', {
 //blog post
 
 sr.reveal('.blog-title', { delay: 300 });
+sr.reveal('.contents', { delay: 300 });
 sr.reveal('.blog-intro', { delay: 400 });
 sr.reveal('.blog-section1', { delay: 500 });
 sr.reveal('.blog-section2', { delay: 600 });
