@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlocking TypeScript: Your Roadmap to Smarter JavaScript Development</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="dist/output.css" />
+    <!--ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css" />
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <!--PRISM CSS FOR SYNTAX HIGHLIGHTING-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+    <header class="sticky top-0 h-[90px] shadow-xl z-30 bg-white">
+        <div class="container mx-auto flex justify-between h-full items-center">
+
+            <!-- logo -->
+            <!-- <a href=""> -->
+                
+            <!-- <img src="assets/hero/logo_smal.png" alt="logo"> -->
+
+        <!-- </a> -->
+            <!--nav-->
+            <nav>
+                <!--nav mobile trigger-->
+                <div class="cursor-pointer lg:hidden" id="nav_trigger_btn">
+                    <i class="ri-menu-4-line text-4xl text-primary"></i>
+                </div>
+                <ul class="fixed w-full h-0 p-0 bg-white overflow-hidden border-t top-[90px] left-0 right-0 flex flex-col gap-4 lg:relative lg:flex-row lg:p-0 lg:top-0 lg:border-none lg:h-full transition-all duration-300 z-60"
+                    id="nav_menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Me</a></li>
+                    <li><a href="index.html#testimonial">My Projects</a></li>
+                    <li><a href="index.html#news">My Posts</a></li>
+                    <li><a href="index.html#pictures">My Pictures</a></li>
+                    <li><a href="index.html#contact">Get in touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="blogpostContainer">
+        <br>
+        <h1>Unlocking TypeScript: Your Roadmap to Smarter JavaScript Development</h1><br>
+        <div class="blog-intro">
+            <p>Before I became a developer, I worked in tech recruitment, occasionally hiring for roles that required
+                TypeScript experience.</p><br>
+            <p>At the time, I knew TypeScript as “kind of like JavaScript but newer and fancier.” This intrigued me, but
+                without a solid grasp of JavaScript, TypeScript felt difficult to unpack—what did it offer that
+                JavaScript didn’t?</p><br>
+            <p>With some Javascript projects under my belt, I wanted to explore Typescript. Why has its popularity
+                surged (global usage increased 37% in 2023), making it the third most popular language on GitHub in
+                2023? </p><br>
+            <p>This beginner's guide will help you understand, install, and start using TypeScript to power both the
+                frontend and backend of your next project. Having benefited from the wealth of online resources on
+                TypeScript, I hope to pay it forward by offering my own perspective and guidance.</p>
+            <br>
+        </div>
+        <div class="blog-section1">
+            <h3>Why was TypeScript invented?</h3>
+            <br>
+            <p>JavaScript is a powerful language, but it has its limitations, especially when building large, complex
+                applications. JavaScript wasn’t originally designed for building systems at scale.</p><br>
+            <p> In the early 2000s, developer tools for JavaScript lacked key features like autocomplete, inline error
+                detection, and easy refactoring. This made managing large projects harder – you'd have to manually track
+                every function and ensure it was used correctly.</p><br>
+            <p>That’s where TypeScript comes in. Created by Anders Hejlsberg, the same person who developed C#,
+                TypeScript was built to solve these problems and give developers a better experience with faster
+                feedback on errors. It adds a type system on top of JavaScript, which helps prevent bugs before they
+                happen.</p><br>
+            <br>
+            <h3>So to summarise, why use TypeScript?</h3>
+            <br>
+            <p><strong>Early error detection:</strong> TypeScript catches errors in your code as you write it, before
+                you even run it in the browser. This saves time by reducing the number of bugs.</p><br>
+            <p><strong>Better readability:</strong> Type annotations make your code clearer to other developers, making
+                it easier for them to work with.</p><br>
+            <p><strong>Stronger tooling:</strong> TypeScript enables features like autocomplete and inline errors,
+                making the development experience smoother.</p><br>
+            <br>
+        </div>
+        <div class="blog-section2">
+            <h3>How do I get started with Typescript?</h3>
+            <br>
+            <p>TypeScript files use the <code>.ts</code> extension, whereas JavaScript files use <code>.js</code>. These
+                <code>.ts</code> files are watched by something called the TypeScript Language Server, which powers the
+                helpful features in your code editor, like autocomplete and error checking as you type.
+            </p><br>
+            <p>Unlike <code>.js</code> files, <code>.ts</code> files can’t be run directly in a browser or a runtime
+                like Node.js.</p><br>
+            <p>You first need to convert your TypeScript code into JavaScript using the TypeScript Compiler
+                (<code>tsc</code>). This process is called <strong>transpiling</strong> – turning your TypeScript into
+                regular JavaScript that browsers and Node can understand.</p><br>
+            <p><strong>To get started, you'll need the following tools:</strong></p><br>
+            <p>&nbsp 1: An IDE (like VS Code): A code editor that supports TypeScript.</p>
+            <p>&nbsp 2: A runtime (like Node.js or a web browser): To run the JavaScript that TypeScript compiles into.
+            </p>
+            <p>&nbsp 3: The TypeScript CLI: The command-line tool that transpiles TypeScript into JavaScript. You can
+                install it globally by running:</p><br>
+            <pre><code class="language-typescript">npm install --global typescript</code></pre>
+
+
+            </pre>
+            <br>
+        </div>
+        <div class="blog-section3">
+            <h3>Type annotations</h3><br>
+            <p>Type annotations allow you to specify the type of data a variable or function should hold.</p>
+            <p>This helps catch mistakes early. In JavaScript, you can assign any value to a variable, but in
+                TypeScript, you can lock in a type:</p><br>
+
+            <pre><code class="language-typescript">
+            let greeting: string = 'hello'; 
+            greeting = 42; // Error: Type 'number' is not assignable to type 'string'.</code></pre>
+
+            <p>By setting types, TypeScript prevents issues where the wrong data type is passed into a function or
+                assigned to a variable.</p><br><br>
+            <h3>How Does TypeScript Enforce Types?</h3><br>
+            <p>TypeScript checks something called <strong>assignability</strong>. This means it looks at whether a value
+                of one type can be assigned to a variable expecting another type. For example, if a function expects a
+                string and you give it a number, TypeScript will flag this as an error.</p><br>
+        </div>
+        <div class="blog-section4">
+            <h3>Primitive Data Types</h3><br>
+            <p>TypeScript has several basic, or "primitive," data types:</p><br>
+            <p><code>string:</code> for text.</p>
+            <p><code>number:</code> for numbers, integers and decimals.</p>
+            <p><code>boolean:</code> for true or false values.</p>
+            <p><code>bigint:</code> for very large numbers that go beyond the limits of the <code>number</code> type.
+            </p>
+            <p><code>symbol:</code> a unique, immutable identifier for object properties.</p>
+            <p><code>null</code> <strong>and </strong><code>undefined:</code> represent the absence of a value. Though
+                they're often treated as special types, they’re still important in type-checking.</p>
+            <br>
+            <p>When defining a new variable, you specify the type like so:
+            </p>
+            <pre><code class="language-typescript">
+            let age: number = 30;</code></pre><br>
+            <p>For functions, you can specify both inputs and output types:</p>
+            <pre><code class="language-typescript">
+                function add(a: number, b: number): number {
+                    return a + b;
+                  }</code></pre><br>
+            <p>In addition to basic data types, TypeScript also supports more complex data structures like arrays and
+                enums, which allow for greater flexibility in your code.</p>
+            <br>
+        </div>
+        <div class="blog-section4">
+            <h3>Complex Data Types</h3><br>
+            <p>TypeScript also supports more complex types, like arrays and enums:</p><br>
+            <h3>Arrays</h3><br>
+            <p>You can declare arrays in two ways:</p>
+            <pre><code class="language-typescript">
+                let names: string[] = ['Oliver', 'Henry'];
+            let numbers: Array<number> = [1, 2, 3];</code></pre><br>
+            <h3>Enums</h3><br>
+            <p>These are useful when a variable can only take one of a few specific values.. An example of For example:
+            </p>
+            <pre><code class="language-typescript">
+                    enum Direction {
+                        North, 
+                        South, 
+                        East, 
+                        West
+                      }
+                      let heading: Direction = Direction.North;
+                      </code></pre>
+            <p>Enums can be made up of string values or numbers values. An example of a string enum would be:
+            </p>
+            <pre><code class="language-typescript">
+                            enum Direction { 
+                                North = "North", 
+                                South = "South", 
+                                East = "East", 
+                                West = "West" }
+                              </code></pre><br>
+            <h3>What if a function doesn’t return anything?
+            </h3>
+            <p>In TypeScript, functions that don’t return a value should have a <code>void</code> return type for
+                clarity:
+            </p>
+            <pre><code class="language-typescript">
+                function logMessage(message: string): void {
+                    console.log(message);
+                }</code></pre><br> <br>
+        </div>
+
+        <div class="blog-secion5">
+            <h3>Customising Your Own Types: Utility Types, Interfaces, Custom Types, Optional Types, <code>any</code>,
+                and Pitfalls
+            </h3>
+            <p>In TypeScript, flexibility comes with responsibility. When you define your own types or work with tools
+                to make your types more flexible, it's important to know <strong>when</strong> and <strong>why</strong>
+                to customise types, and how to do it in a way that keeps your code safe and maintainable.
+            </p><br>
+            <h3>Custom Types
+            </h3>
+            <p>You can create custom types using <strong>type aliases</strong> to represent objects and other structures
+                in your application. Custom types make your code easier to read and use consistently:
+            </p>
+            <pre><code class="language-typescript">
+            type User = {
+                name: string;
+                userId: number;
+                email: string;
+            }; </code></pre><br>
+            <h3>Interfaces and Extending Interfaces
+            </h3>
+            <p>Interfaces allow you to define the shape of objects and can be extended to build on existing structures.
+                This reduces redundancy and makes your code more modular:</p>
+            <pre><code class="language-typescript">interface Shape {
+                color: string;
+              }
+              
+              interface Square extends Shape {
+                sideLength: number;
+              }
+              
+              const mySquare: Square = { color: 'blue', sideLength: 10 };
+              </code></pre><br>
+            <p>In this example, the <code>Square</code> interface inherits the <code>color</code> property from the
+                <code>Shape</code> interface.
+            </p><br>
+            <h3>Utility Types
+            </h3>
+            TypeScript offers <strong>utility types</strong> that let you modify and refine existing types. For example…
+            </p><br>
+            <h3>Omit</h3><br>
+            <p><code>Omit</code> allows you to exclude certain fields:</p>
+            <pre><code class="language-typescript">type UserWithoutEmail = Omit&lt;User, 'email'&gt;;</code></pre><br>
+
+            <p>This is useful when you want to reuse a type but don’t need every field.
+            </p><br>
+            <h3>Pick</h3><br>
+            <p><code>Pick</code> is the opposite of <code>Omit</code>. Instead of excluding properties,
+                <code>Pick</code> allows you to create a new type by selecting only the properties you want from an
+                existing type. This is particularly useful when you only need a subset of a larger type. For example:
+            </p>
+            <pre><code class="language-typescript">type UserNameAndID = Pick&lt;User, 'name' | 'userId'&gt;;</code></pre>
+            <br>
+
+            <p>Here, <code>UserNameAndID</code> will only have the <code>name</code> and <code>userId</code> properties
+                from the User type. It’s a great way to narrow down types when you only need certain pieces of data.</p>
+            <br><br>
+            <h3>Optional and <code>any</code> Types: Use with Caution
+            </h3><br>
+            <p>You can make fields optional using a <code>?</code> or allow any data type with <code>any</code>. But be
+                careful – using <code>any</code> too much defeats the purpose of TypeScript. It’s better to be specific
+                with your types, so your code is robust and easy to debug:
+            </p>
+            <pre><code class="language-typescript">
+                        let username: any = "Oliver"; // Allows any type
+            let age?: number; // Optional field&gt;;</code></pre><br>
+            <h3>Pitfalls of overflexibility</h3><br>
+            <p>Too much flexibility can lead to unexpected bugs. If your types are too loose, TypeScript can’t catch
+                potential issues early.</p><br>
+            <p>Be mindful of when and why you’re using tools like <code>any</code>, optional types, and flexible utility
+                types – they can solve problems quickly, but you might end up introducing more complexity in the long
+                run.</p><br><br>
+        </div>
+       <div class="blog-section6">
+        <h3>Using TypeScript with React
+        </h3><br>
+        <p>You can use TypeScript with React by writing your components in <code>.tsx</code> files. This helps when defining the types for your component’s props and state. Here’s a simple example:</p><br>
+        <pre><code class="language-typescript">
+            type GreetingProps = {
+                name: string;
+              };
+            
+            const Greeting: React.FC<GreetingProps> = ({ name }) => {
+                return <h1>Hello, {name}!</h1>;
+              };</code></pre><br>
+<p>In React, when handling events (like button clicks), you need to specify the event type:
+</p>
+<pre><code class="language-typescript">
+    const handleClick = (event: React.MouseEvent&lt;HTMLButtonElement&gt;) => {
+        console.log('Button clicked!', event);
+      };
+   </code></pre><br>
+<p>For more information on React’s built-in types, check out <strong><a href="https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/types/react/index.d.ts">this folder of the DefinitelyTyped documentation</a></strong>, and <strong><a href="https://react.dev/learn/typescript">React's own Typescript documentation</a></strong> by following these links.
+</p>
+  
+       </div>
+    </section>
+    <!-- Prism JS for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+</body>
+
+</html>
